@@ -13,6 +13,6 @@
     @apply bg-white text-primary ring-inset ring-primary hover:bg-primary hover:text-white hover:opacity-85;
   }
   .input {
-    @apply block w-auto rounded-md border-0 py-2 pl-3 text-text ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-primary text-sm lg:text-base sm:leading-6;
+    @apply block w-auto rounded-md border-none py-2 pl-3 text-text placeholder:text-gray-400 focus:ring-0 text-sm lg:text-base sm:leading-6;
   }
 }

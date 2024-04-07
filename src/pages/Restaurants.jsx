@@ -45,13 +45,15 @@ const Restaurants = () => {
                 hunger partner. Straight out of the oven to your doorstep
               </p>
             </div>
-            <div className="w-full md:max-w-[464px] flex justify-between bg-[#F6F6F6] rounded-[56px] py-1">
+            <div className="sm:max-w-[464px] relative rounded-[56px] py-1 pr-1 mx-auto md:mx-0 shadow-sm bg-[#F6F6F6]">
               <input
                 type="search"
+                className="input bg-transparent w-[19rem] lg:w-[29rem] rounded-[56px] pl-5 pr-20 sm:text-sm sm:leading-6"
                 placeholder="Enter your delivery location"
-                className="bg-[#F6F6F6] w-2/3 rounded-[56px] pl-4"
               />
-              <button className="btn btn-primary">Order Now</button>
+              <div className="absolute inset-y-0 right-0 flex items-center">
+                <button className="btn btn-primary">Order Now</button>
+              </div>
             </div>
             <div className="flex gap-4 lg:gap-7 mx-auto md:mx-0">
               <img
@@ -206,13 +208,15 @@ const Restaurants = () => {
             your address blow.
           </p>
         </div>
-        <div className="flex-1 w-full md:max-w-[414px] flex justify-between bg-white rounded-[56px] py-1">
+        <div className="relative rounded-[56px] py-1 pr-1 shadow-sm bg-white">
           <input
-            type="search"
-            placeholder="Enter your delivery location"
-            className="bg-white w-2/3 rounded-[56px] pl-4"
+            type="email"
+            className="input w-[19rem] lg:w-[29rem] rounded-[56px] pl-5 pr-20 sm:text-sm sm:leading-6"
+            placeholder="Enter your email"
           />
-          <button className="btn btn-primary">Send</button>
+          <div className="absolute inset-y-0 right-0 flex items-center">
+            <button className="btn btn-primary">Send</button>
+          </div>
         </div>
       </div>
     </>
