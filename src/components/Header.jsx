@@ -77,30 +77,42 @@ const Header = () => {
                   : `top-[-100%] ease-out duration-700`
               }
             >
-              <li
+              <NavLink
                 onClick={() => setMenuOpen(false)}
-                className="hover:underline cursor-pointer"
+                to="/"
+                className={({ isActive }) => (isActive ? 'text-primary' : '')}
               >
-                Restaurants
-              </li>
-              <li
+                <li className="hover:text-primary hover:underline cursor-pointer">
+                  Recipes
+                </li>
+              </NavLink>
+              <NavLink
                 onClick={() => setMenuOpen(false)}
-                className="hover:underline cursor-pointer"
+                to="/recipes"
+                className={({ isActive }) => (isActive ? 'text-primary' : '')}
               >
-                Recipes
-              </li>
-              <li
+                <li className="hover:text-primary hover:underline cursor-pointer">
+                  Recipes
+                </li>
+              </NavLink>
+              <NavLink
                 onClick={() => setMenuOpen(false)}
-                className="hover:underline cursor-pointer"
+                to="/about"
+                className={({ isActive }) => (isActive ? 'text-primary' : '')}
               >
-                About
-              </li>
-              <li
+                <li className="hover:text-primary hover:underline cursor-pointer">
+                  Recipes
+                </li>
+              </NavLink>
+              <NavLink
                 onClick={() => setMenuOpen(false)}
-                className="hover:underline cursor-pointer"
+                to="/pages"
+                className={({ isActive }) => (isActive ? 'text-primary' : '')}
               >
-                Pages
-              </li>
+                <li className="hover:text-primary hover:underline cursor-pointer">
+                  Recipes
+                </li>
+              </NavLink>
               <li onClick={() => setMenuOpen(false)} className="btn btn-light">
                 Login
               </li>
