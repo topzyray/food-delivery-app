@@ -64,8 +64,18 @@ const Header = () => {
             </NavLink>
           </ul>
           <div className="hidden md:flex gap-4 items-center">
-            <button className="btn btn-light">Login</button>
-            <button className="btn btn-primary">Sign Up</button>
+            <NavLink
+              to="/login"
+              className={({ isActive }) => (isActive ? 'text-primary' : '')}
+            >
+              <button className="btn btn-light">Login</button>
+            </NavLink>
+            <NavLink
+              to="/signup"
+              className={({ isActive }) => (isActive ? 'text-primary' : '')}
+            >
+              <button className="btn btn-primary">Sign Up</button>
+            </NavLink>
           </div>
 
           {/* Mobile nav */}
@@ -83,7 +93,7 @@ const Header = () => {
                 className={({ isActive }) => (isActive ? 'text-primary' : '')}
               >
                 <li className="hover:text-primary hover:underline cursor-pointer">
-                  Recipes
+                  Restaurants
                 </li>
               </NavLink>
               <NavLink
@@ -101,7 +111,7 @@ const Header = () => {
                 className={({ isActive }) => (isActive ? 'text-primary' : '')}
               >
                 <li className="hover:text-primary hover:underline cursor-pointer">
-                  Recipes
+                  About
                 </li>
               </NavLink>
               <NavLink
@@ -110,18 +120,28 @@ const Header = () => {
                 className={({ isActive }) => (isActive ? 'text-primary' : '')}
               >
                 <li className="hover:text-primary hover:underline cursor-pointer">
-                  Recipes
+                  Pages
                 </li>
               </NavLink>
-              <li onClick={() => setMenuOpen(false)} className="btn btn-light">
-                Login
-              </li>
-              <li
+              <NavLink
+                to="/login"
                 onClick={() => setMenuOpen(false)}
-                className="btn btn-primary"
+                className={({ isActive }) => (isActive ? 'text-primary' : '')}
               >
-                Sign Up
-              </li>
+                <li className="btn btn-light">Login</li>
+              </NavLink>
+              <NavLink
+                to="/signup"
+                onClick={() => setMenuOpen(false)}
+                className={({ isActive }) => (isActive ? 'text-primary' : '')}
+              >
+                <li
+                  onClick={() => setMenuOpen(false)}
+                  className="btn btn-primary"
+                >
+                  Sign Up
+                </li>
+              </NavLink>
             </ul>
           )}
         </nav>
